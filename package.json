@@ -1,0 +1,20 @@
+{
+  "name": "gcopy",
+  "version": "1.0.0",
+  "description": "A CLI to automatically clone any repo by giving username and repo name",
+  "main": "index.js",
+  "bin": {
+    "gcopy": "index.js"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knowbee/gcopy.git"
+  },
+  "keywords": [],
+  "author": "Igwaneza Bruce <knowbeeinc@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/knowbee/gcopy/issues"
+  },
+  "homepage": "https://github.com/knowbee/gcopy#readme"
+}
