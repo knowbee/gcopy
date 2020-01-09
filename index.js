@@ -14,7 +14,7 @@ const repo = `https://github.com/${name}.git`;
 
 runCommand('git', ['clone', repo])
   .then(() => {
-    console.log('cloning repo...');
+    console.log('🔥🔥🔥🔥🔥');
     
   }).then(() => {
     console.log('Done!');
