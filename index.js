@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
-const { spawn } = require('child_process');
-
+const { spawn } = require("child_process");
+const ora = require("ora");
 const name = process.argv[2];
 if (!name || name.indexOf("/") < -1) {
   return console.log(`
@@ -11,28 +11,29 @@ if (!name || name.indexOf("/") < -1) {
 }
 
 const repo = `https://github.com/${name}.git`;
-
-runCommand('git', ['clone', repo])
+const spinner = ora();
+spinner.start();
+runCommand("git", ["clone", repo])
   .then(() => {
-    console.log('🔥🔥🔥🔥🔥');
-    
-  }).then(() => {
-    console.log('Done!');
+    spinner.succeed(`${repo} successfully cloned`);
+  })
+  .then(() => {
+    spinner.stop();
   });
 
 function runCommand(command, args, options = undefined) {
   const spawned = spawn(command, args, options);
 
-  return new Promise((resolve) => {
-    spawned.stdout.on('data', (data) => {
+  return new Promise(resolve => {
+    spawned.stdout.on("data", data => {
       console.log(data.toString());
     });
-    
-    spawned.stderr.on('data', (data) => {
+
+    spawned.stderr.on("data", data => {
       console.error(data.toString());
     });
-    
-    spawned.on('close', () => {
+
+    spawned.on("close", () => {
       resolve();
     });
   });
