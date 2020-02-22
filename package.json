@@ -17,7 +17,7 @@
     "url": "https://github.com/knowbee/gcopy/issues"
   },
   "homepage": "https://github.com/knowbee/gcopy#readme",
-  "devDependencies": {
+  "dependencies": {
     "ora": "^4.0.3"
   }
 }
