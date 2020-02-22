@@ -1,6 +1,6 @@
 {
   "name": "gcopy",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A CLI to automatically clone any repo by giving username and repo name",
   "main": "index.js",
   "bin": {
